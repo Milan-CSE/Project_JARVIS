@@ -1,12 +1,10 @@
 from .context import (
     ContextItem,
-    ContextSource,
     IntelligenceContext,
 )
-from .intelligence import Intelligence
+from .source import ContextSource
 
 __all__ = [
-    "Intelligence",
     "ContextItem",
     "ContextSource",
     "IntelligenceContext",
