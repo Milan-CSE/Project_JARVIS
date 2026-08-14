@@ -3,6 +3,7 @@ from .context import (
     ContextSource,
     IntelligenceContext,
 )
+
 from .decision import (
     Decision,
     DecisionAdapter,
@@ -17,8 +18,67 @@ from .decision import (
     ValidationResult,
     WorkflowProposal,
 )
+
+from .reasoning_intent import (
+    IntentExtractorContract,
+    IntentSelectorContract,
+    ReasoningIntentPipeline,
+    ReasoningIntentResult,
+    ReasoningIntentStatus,
+    ReasoningResolverContract,
+)
+
+from .orchestration import IntelligenceOrchestrator
+
+from .orchestration_models import (
+    IntelligenceOrchestrationResult,
+    IntelligenceOrchestrationStatus,
+)
+
 from .intelligence import Intelligence
 from .intent import Intent
+
+from .reasoning import (
+    Ambiguity,
+    AmbiguousIntentError,
+    DecisionGenerationRule,
+    DecisionUndeterminedError,
+    IntentCandidate,
+    IntentExtractor,
+    IntentSelector,
+    MissingInformation,
+    NoIntentCandidateError,
+    ProviderBackedReasoner,
+    ProviderRequest,
+    ProviderResponse,
+    Reasoner,
+    ReasoningCancelledError,
+    ReasoningObservation,
+    ReasoningOutputError,
+    ReasoningOutputParser,
+    ReasoningProvider,
+    ReasoningProviderError,
+    ReasoningResolution,
+    ReasoningResolutionIssue,
+    ReasoningResolutionStatus,
+    ReasoningResolver,
+    ReasoningResult,
+    ReasoningRule,
+    ReasoningUncertainty,
+    RuleBasedDecisionGenerator,
+    RuleBasedReasoner,
+    UncertaintyLevel,
+    DecisionGenerationCancelledError,
+)
+
+from .integration import (
+    IntegratedIntelligence,
+    ReasoningPipeline,
+    ReasoningPipelineOutcome,
+    ReasoningPipelineStatus,
+)
+
+from .orchestration import IntelligenceOrchestrator
 
 __all__ = [
     "Intelligence",
@@ -38,4 +98,48 @@ __all__ = [
     "ValidationResult",
     "DecisionAdapter",
     "UnsupportedDecisionKindError",
+    "Reasoner",
+    "ReasoningRule",
+    "RuleBasedReasoner",
+    "ReasoningCancelledError",
+    "ProviderBackedReasoner",
+    "ReasoningProvider",
+    "ReasoningProviderError",
+    "ProviderRequest",
+    "ProviderResponse",
+    "ReasoningOutputParser",
+    "ReasoningOutputError",
+    "ReasoningResult",
+    "ReasoningObservation",
+    "IntentCandidate",
+    "Ambiguity",
+    "MissingInformation",
+    "ReasoningUncertainty",
+    "UncertaintyLevel",
+    "IntentSelector",
+    "IntentExtractor",
+    "NoIntentCandidateError",
+    "AmbiguousIntentError",
+    "ReasoningResolution",
+    "ReasoningResolutionIssue",
+    "ReasoningResolutionStatus",
+    "ReasoningResolver",
+    "DecisionGenerationRule",
+    "DecisionUndeterminedError",
+    "RuleBasedDecisionGenerator",
+    "DecisionGenerationCancelledError",
+    "IntelligenceOrchestrator",
+    "IntelligenceOrchestrationResult",
+    "IntelligenceOrchestrationStatus",
+    "ReasoningPipeline",
+    "IntegratedIntelligence",
+    "ReasoningPipelineOutcome",
+    "ReasoningPipelineStatus",
+    "ReasoningIntentPipeline",
+    "ReasoningIntentResult",
+    "ReasoningIntentStatus",
+    "ReasoningResolverContract",
+    "IntentSelectorContract",
+    "IntentExtractorContract",
+        
 ]
