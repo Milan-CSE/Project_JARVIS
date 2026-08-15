@@ -78,7 +78,111 @@ from .integration import (
     ReasoningPipelineStatus,
 )
 
-from .orchestration import IntelligenceOrchestrator
+from .intent_decision import (
+    DecisionGeneratorContract,
+    IntentDecisionPipeline,
+    IntentDecisionResult,
+    IntentDecisionStatus,
+)
+
+from .decision_proposal import (
+    DecisionProposalPipeline,
+    DecisionProposalResult,
+    DecisionProposalStatus,
+    ProposalGeneratorContract,
+)
+
+from .semantic_validation import (
+    SemanticValidationPipeline,
+    SemanticValidationResult,
+    SemanticValidationStatus,
+    SemanticValidatorContract,
+)
+
+from .agent_handoff import (
+    AgentDecisionHandoffPipeline,
+    AgentDecisionHandoffResult,
+    AgentDecisionHandoffStatus,
+    DecisionAdapterContract,
+)
+
+from .failure import (
+    IntelligenceFailure,
+    IntelligenceFailureBoundary,
+    IntelligenceOperationResult,
+    IntelligenceOperationStatus,
+)
+
+from .response import (
+    DefaultResponseGenerator,
+    Response,
+    ResponseGenerationPipeline,
+    ResponseGenerationResult,
+    ResponseGeneratorContract,
+    ResponseStatus,
+)
+
+from .plan_validation import (
+    DefaultPlanValidator,
+    PlanValidationIssue,
+    PlanValidationPipeline,
+    PlanValidationResult,
+    PlanValidationStatus,
+    PlanValidatorContract,
+)
+
+from .workflow_selection import (
+    DefaultWorkflowSelector,
+    WorkflowSelectionPipeline,
+    WorkflowSelectionResult,
+    WorkflowSelectionStatus,
+    WorkflowSelectorContract,
+)
+
+from .replanning import (
+    BoundedReplanningPipeline,
+    ReplanRequest,
+    ReplannerContract,
+    ReplanningResult,
+    ReplanningStatus,
+)
+
+from .result_interpretation import (
+    DefaultResultInterpreter,
+    ResultInterpretation,
+    ResultInterpretationPipeline,
+    ResultInterpretationResult,
+    ResultInterpretationStatus,
+    ResultInterpreterContract,
+)
+
+from .memory_feedback import (
+    DefaultMemoryFeedbackEvaluator,
+    MemoryCandidate,
+    MemoryFeedbackEvaluatorContract,
+    MemoryFeedbackPipeline,
+    MemoryFeedbackResult,
+    MemoryFeedbackStatus,
+)
+
+from .agent_intelligence import (
+    AgentCommandChannel,
+    AgentCommandReceipt,
+    AgentFeedbackChannel,
+    AgentFeedbackReceipt,
+    AgentIntelligenceBridge,
+    AgentIntelligenceInteraction,
+)
+
+from .full_integration import (
+    ExecutionFeedback,
+    FullIntelligenceIntegration,
+    FullIntelligenceResult,
+    FullIntelligenceStatus,
+)
+
+from .orchestrator import DefaultIntelligenceOrchestrator
+
 
 __all__ = [
     "Intelligence",
@@ -141,5 +245,70 @@ __all__ = [
     "ReasoningResolverContract",
     "IntentSelectorContract",
     "IntentExtractorContract",
+    "DecisionGeneratorContract",
+    "IntentDecisionPipeline",
+    "IntentDecisionResult",
+    "IntentDecisionStatus",
+    "ProposalGeneratorContract",
+    "DecisionProposalPipeline",
+    "DecisionProposalResult",
+    "DecisionProposalStatus",
+    "SemanticValidatorContract",
+    "SemanticValidationPipeline",
+    "SemanticValidationResult",
+    "SemanticValidationStatus",
+    "DecisionAdapterContract",
+    "AgentDecisionHandoffPipeline",
+    "AgentDecisionHandoffResult",
+    "AgentDecisionHandoffStatus",
+    "IntelligenceFailure",
+    "IntelligenceFailureBoundary",
+    "IntelligenceOperationResult",
+    "IntelligenceOperationStatus",
+    "DefaultIntelligenceOrchestrator",
+    "Response",
+    "ResponseStatus",
+    "ResponseGeneratorContract",
+    "DefaultResponseGenerator",
+    "ResponseGenerationPipeline",
+    "ResponseGenerationResult",
+    "PlanValidationIssue",
+    "PlanValidationResult",
+    "PlanValidationStatus",
+    "PlanValidatorContract",
+    "DefaultPlanValidator",
+    "PlanValidationPipeline",
+    "WorkflowSelectionStatus",
+    "WorkflowSelectionResult",
+    "WorkflowSelectorContract",
+    "DefaultWorkflowSelector",
+    "WorkflowSelectionPipeline",
+    "ReplanRequest",
+    "ReplannerContract",
+    "ReplanningResult",
+    "ReplanningStatus",
+    "BoundedReplanningPipeline",
+    "ResultInterpretation",
+    "ResultInterpretationResult",
+    "ResultInterpretationStatus",
+    "ResultInterpreterContract",
+    "DefaultResultInterpreter",
+    "ResultInterpretationPipeline",
+    "MemoryCandidate",
+    "MemoryFeedbackResult",
+    "MemoryFeedbackStatus",
+    "MemoryFeedbackEvaluatorContract",
+    "DefaultMemoryFeedbackEvaluator",
+    "MemoryFeedbackPipeline",
+    "AgentCommandChannel",
+    "AgentCommandReceipt",
+    "AgentFeedbackChannel",
+    "AgentFeedbackReceipt",
+    "AgentIntelligenceBridge",
+    "AgentIntelligenceInteraction",
+    "ExecutionFeedback",
+    "FullIntelligenceIntegration",
+    "FullIntelligenceResult",
+    "FullIntelligenceStatus",
         
 ]
